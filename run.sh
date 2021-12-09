@@ -3,7 +3,7 @@
 set -e
 
 CXX=clang++
-CXXFLAGS="-std=c++17 -Wall -Wextra -Wpedantic -Werror -O3"
+CXXFLAGS="$(cat compile_flags.txt | tr '\n' ' ')"
 
 exe=$1/main
 infile=$1/input.txt
