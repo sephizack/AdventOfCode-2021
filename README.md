@@ -13,6 +13,7 @@ It's just something that _works_ and developped with _performance in mind_ (but 
 
 - bash
 - clang (or any C++ compiler if you edit the `CXX` variable in `run.sh`)
+- gdb (if you want to debug)
 
 ### Run a problem
 
@@ -21,3 +22,7 @@ It's just something that _works_ and developped with _performance in mind_ (but 
 Example:
 
     ./run.sh 05_hydrothermal_venture/part2
+
+### Debug a problem
+
+    ./run.sh --gdb <problem>/<part>
