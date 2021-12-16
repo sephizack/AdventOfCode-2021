@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include "../../common.hpp"
 
 using namespace std;
 
@@ -6,18 +6,19 @@ int main() {
     // Fast ios
     ios_base::sync_with_stdio(false);
     cin.tie(NULL); cout.tie(NULL);
-
-    uint increaseCount = 0;
-
-    int prev, curr;
-    cin >> prev;
-    while (cin >> curr) {
-        increaseCount += curr > prev;
-        prev = curr;
+    
+    uint aRes=0;
+    uint aMeasure=-1;
+    uint aNewMeasure=-1;
+    while (cin>>aNewMeasure)
+    {
+        if (aNewMeasure > aMeasure) {
+            ++aRes;
+        }
+        aMeasure = aNewMeasure;
     }
 
-    cout << increaseCount << endl;
-
+    dbg(aRes);
     return 0;
 }
 
